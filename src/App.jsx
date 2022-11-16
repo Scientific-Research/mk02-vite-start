@@ -14,6 +14,7 @@ function App() {
   // definieren eine State Variable
   const [userIsOnline, setUserIsOnline] = useState(false);
   const [thePassword, setThePassword] = useState(" ");
+  const [LichtToggle, setLichtToggle] = useState(false);
 
   const handleButtonClick = (e) => {
     // userIsOnline = !userIsOnline;
@@ -23,6 +24,12 @@ function App() {
     if (password === thePassword) {
       setUserIsOnline(true);
     }
+  };
+
+  const ToggleDasLicht = (e) => {
+    e.preventDefault();
+
+    setLichtToggle((LichtToggle) => !LichtToggle);
   };
 
   return (
@@ -38,10 +45,14 @@ function App() {
           ></input>
           {/* {thePassword} */}
           <button onClick={handleButtonClick}>Login</button>
+          <button onClick={ToggleDasLicht}>Licht</button>
         </form>
 
         {/* strange if statement */}
         {userIsOnline && <div>user is online</div>}
+        {LichtToggle && <div>Licht umschaltet.</div>}
+        {/* {LichtAUS && <div>Licht ist AUS.</div>} */}
+
         {/* <p>This is a Test App with Vite.</p> */}
         <hr />
 
