@@ -4,7 +4,32 @@ body {
   font-family: sans-serif;
   padding: 0 1rem;
 
-  h1 {
-    color: yellow;
+  // h1 {
+  //   color: yellow;
+  // }
+
+  .fileExists {
+    color: green;
+    background-color: pink;
+  }
+
+  .fileIsDeleted {
+    color: red;
+    font-weight: bold;
+    background-color: yellow;
+  }
+  .book {
+    background-color: #222;
+    width: 500px;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    // padding-bottom: 1rem;
+  }
+  .singleBook {
+    margin-bottom: 1rem;
+    // margin-left: 0.5rem;
+  }
+  span {
+    color: rgb(206, 79, 111);
   }
 }
