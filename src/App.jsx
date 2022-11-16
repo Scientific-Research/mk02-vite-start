@@ -45,16 +45,18 @@ function App() {
           ></input>
           {/* {thePassword} */}
           <button onClick={handleButtonClick}>Login</button>
-          <button onClick={ToggleDasLicht}>Licht</button>
+          <button onClick={ToggleDasLicht} className="Licht">
+            Wechselschalter
+          </button>
         </form>
-
+        <hr />
         {/* strange if statement */}
         {userIsOnline && <div>user is online</div>}
-        {LichtToggle && <div>Licht umschaltet.</div>}
+        {/* {LichtToggle && <div>Licht umschaltet.</div>} */}
+        {LichtToggle && <div>Licht ist AN!</div>}
         {/* {LichtAUS && <div>Licht ist AUS.</div>} */}
 
         {/* <p>This is a Test App with Vite.</p> */}
-        <hr />
 
         {/* strange Eternary Operator */}
 
@@ -64,6 +66,12 @@ function App() {
           <div>User needs to login!</div>
         )}
 
+        <hr />
+        {LichtToggle ? (
+          <div>Bitte keinen Schalter betätigen!!</div>
+        ) : (
+          <div>Du musst das Licht AN machen!</div>
+        )}
         <hr />
         {/* {userIsOnline && <div>secret password: 738373</div>} */}
         {
